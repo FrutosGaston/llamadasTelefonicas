@@ -1,21 +1,24 @@
 require 'spec_helper'
-require_relative '../src/llamada_nacional'
+require_relative '../src/costo_llamada_nacional'
+require 'countries'
+require_relative '../src/llamada'
 
-describe '' do
+describe do
+
+  before(:each) do
+    @costo_llamada = CostoLlamadaNacional.new(@llamada)
+    @llamada = Llamada.new(ISO3166::Country.new('US'),ISO3166::Country.new('US'),1, DateTime.new(2016,11,30,11,1,1,'+7'))
+  end
 
   it 'should do something' do
 
-    @llamada = LlamadaNacional.new
-    expect(@llamada.costo_por_minuto).to be 0.3
+    expect(@costo_llamada.costo_por_minuto).to be 0.3
   end
 
   it 'aa' do
-    @llamada = LlamadaNacional.new
-    @llamada.minutes(5)
+    @llamada.duracion = 5
 
-    expect(@llamada.costo).to be 0.3*5
+    expect(@costo_llamada.costo_total).to be 0.3*5
   end
-
-
 
 end
