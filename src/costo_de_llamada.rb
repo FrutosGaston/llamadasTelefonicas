@@ -2,15 +2,21 @@ require_relative '../src/llamada'
 
 class CostoDeLlamada
 
-  attr_accessor :costo
-  attr_accessor :llamada
-
-  def initialize(llamada)
-    @llamada = llamada
+  def initialize(costo, condicion)
+    @costo = costo
+    @condicion = condicion
   end
 
-  def costo_total
-    costo = costo_por_minuto * @llamada.duracion
+  def costo_total(llamada)
+    costo = costo_por_minuto * llamada.duracion
+  end
+
+  def costo_por_minuto()
+    @costo
+  end
+
+  def puede_hacerse_cargo(llamada)
+    @condicion.call(llamada)
   end
 
 end

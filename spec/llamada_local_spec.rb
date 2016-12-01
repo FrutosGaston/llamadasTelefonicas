@@ -1,5 +1,4 @@
 require 'spec_helper'
-require_relative '../src/costo_llamada_local'
 require 'date'
 require 'countries'
 require_relative '../src/llamada'

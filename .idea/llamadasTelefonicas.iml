@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="RUBY_MODULE" version="4">
   <component name="ModuleRunConfigurationManager">
-    <configuration default="false" name="Run spec 'llamada_nacional_spec': llamadasTelefonicas" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
+    <configuration default="false" name="All specs in spec: llamadasTelefonicas" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
       <predefined_log_file id="RUBY_RSPEC" enabled="true" />
       <module name="llamadasTelefonicas" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
@@ -19,12 +19,12 @@
           <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
         </COVERAGE_PATTERN>
       </EXTENSION>
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$MODULE_DIR$/spec/llamada_nacional_spec.rb" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="$MODULE_DIR$/spec" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*_spec.rb" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="ALL_IN_FOLDER" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_ARGS" VALUE="" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_SPEC_RUNNER" VALUE="false" />
@@ -34,7 +34,7 @@
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
       <method />
     </configuration>
-    <configuration default="false" name=" A bill with a local national call of a minute should cost 10.3 and its national calls cost must be 0.3: llamadasTelefonicas" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
+    <configuration default="false" name=" A bill without calls should cost 10: llamadasTelefonicas" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
       <predefined_log_file id="RUBY_RSPEC" enabled="true" />
       <module name="llamadasTelefonicas" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
@@ -56,7 +56,7 @@
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$MODULE_DIR$/spec/facturador_llamadas_spec.rb" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*_spec.rb" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE=" A bill with a local national call of a minute should cost 10.3 and its national calls cost must be 0.3" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE=" A bill without calls should cost 10" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_ARGS" VALUE="" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
@@ -100,7 +100,7 @@
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
       <method />
     </configuration>
-    <configuration default="false" name=" A bill with a local LOCAL call of 2 minutes should cost 10.4: llamadasTelefonicas" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
+    <configuration default="false" name="Run spec 'llamada_nacional_spec': llamadasTelefonicas" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
       <predefined_log_file id="RUBY_RSPEC" enabled="true" />
       <module name="llamadasTelefonicas" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
@@ -119,10 +119,10 @@
         </COVERAGE_PATTERN>
       </EXTENSION>
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$MODULE_DIR$/spec/facturador_llamadas_spec.rb" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$MODULE_DIR$/spec/llamada_nacional_spec.rb" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*_spec.rb" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE=" A bill with a local LOCAL call of 2 minutes should cost 10.4" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_ARGS" VALUE="" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
@@ -133,7 +133,7 @@
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
       <method />
     </configuration>
-    <configuration default="false" name=" A bill with a local INTERNATIONAL call of 2 minutes should cost 10.4: llamadasTelefonicas" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
+    <configuration default="false" name=" should do something: llamadasTelefonicas" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
       <predefined_log_file id="RUBY_RSPEC" enabled="true" />
       <module name="llamadasTelefonicas" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
@@ -152,10 +152,10 @@
         </COVERAGE_PATTERN>
       </EXTENSION>
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$MODULE_DIR$/spec/facturador_llamadas_spec.rb" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$MODULE_DIR$/spec/llamada_nacional_spec.rb" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*_spec.rb" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE=" A bill with a local INTERNATIONAL call of 2 minutes should cost 10.4" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE=" should do something" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_ARGS" VALUE="" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
@@ -168,18 +168,16 @@
     </configuration>
   </component>
   <component name="NewModuleRootManager">
-    <content url="file://$MODULE_DIR$" />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/spec" isTestSource="true" />
+    </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" scope="PROVIDED" name="activesupport (v5.0.0.1, RVM: ruby-2.2.3) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bundler (v1.13.6, RVM: ruby-2.2.3) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="concurrent-ruby (v1.0.2, RVM: ruby-2.2.3) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="countries (v2.0.2, RVM: ruby-2.2.3) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="diff-lcs (v1.2.5, RVM: ruby-2.2.3) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="factory_girl (v4.7.0, RVM: ruby-2.2.3) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="i18n (v0.7.0, RVM: ruby-2.2.3) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="i18n_data (v0.7.0, RVM: ruby-2.2.3) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="minitest (v5.9.1, RVM: ruby-2.2.3) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="money (v6.7.1, RVM: ruby-2.2.3) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rspec (v3.5.0, RVM: ruby-2.2.3) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rspec-core (v3.5.4, RVM: ruby-2.2.3) [gem]" level="application" />
@@ -187,8 +185,6 @@
     <orderEntry type="library" scope="PROVIDED" name="rspec-mocks (v3.5.0, RVM: ruby-2.2.3) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rspec-support (v3.5.0, RVM: ruby-2.2.3) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sixarm_ruby_unaccent (v1.1.1, RVM: ruby-2.2.3) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="thread_safe (v0.3.5, RVM: ruby-2.2.3) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="tzinfo (v1.2.2, RVM: ruby-2.2.3) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="unicode_utils (v1.4.0, RVM: ruby-2.2.3) [gem]" level="application" />
   </component>
 </module>
