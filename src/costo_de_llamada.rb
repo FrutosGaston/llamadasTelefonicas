@@ -3,9 +3,9 @@ require_relative '../src/llamada'
 class CostoDeLlamada
 
   attr_accessor :costo
+  attr_accessor :llamada
 
   def initialize(llamada)
-    @momento_de_llamada = DateTime.now
     @llamada = llamada
   end
 

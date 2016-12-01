@@ -15,6 +15,10 @@ class CostoLlamadaLocal < CostoDeLlamada
     subclase_encargada.costo_por_minuto
   end
 
+  def puede_acerse_cargo(llamada)
+    llamada.origen.first == llamada.destino.first && llamada.origen.last == llamada.destino.last
+  end
+
   private
   def subclase_encargada
     (@subclases.select { |llamada| llamada.esta_en_tiempo(@llamada.momento) }).first

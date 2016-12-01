@@ -11,7 +11,7 @@ describe do
 # mientras en el resto de las horas es de 0,10 centavos el minuto. Los sábados y domingos cuesta 0,10 centavos el minuto
 
   before(:each) do
-    @llamada = Llamada.new(ISO3166::Country.new('US'),ISO3166::Country.new('US'),1, DateTime.new(2016,11,30,11,1,1,'+7'))
+    @llamada = Llamada.new(ISO3166::Country.new('US'),'NY',ISO3166::Country.new('US'),'NY',5, DateTime.new(2016,11,30,11,1,1,'+7'))
     @costo_llamada = CostoLlamadaLocal.new(@llamada)
   end
 

@@ -8,4 +8,8 @@ class CostoLlamadaNacional < CostoDeLlamada
     0.3
   end
 
+  def puede_acerse_cargo(llamada)
+    llamada.origen.first == llamada.destino.first
+  end
+
 end

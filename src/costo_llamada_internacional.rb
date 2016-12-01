@@ -17,9 +17,13 @@ class CostoLlamadaInternacional < CostoDeLlamada
     subclase_encargada.costo_por_minuto
   end
 
+  def puede_acerse_cargo(llamada)
+    llamada.origen.first != llamada.destino.first
+  end
+
   private
   def subclase_encargada
-    (@subclases.select { |llamada| llamada.se_encarga_del_destino(@llamada.destino) }).first
+    (@subclases.select { |llamada| llamada.se_encarga_del_destino(@llamada.destino.first) }).first
   end
 
 end
