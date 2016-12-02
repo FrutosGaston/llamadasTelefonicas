@@ -39,7 +39,7 @@ class Llamada
   end
 
   def es_local?
-    es_nacional? && @origen.last == @origen.last
+    es_nacional? && @origen.last == @destino.last
   end
 
   def es_internacional?
@@ -56,6 +56,14 @@ class Llamada
 
   def llamada_a_sudamerica?
     @destino.first.region == 'South America'
+  end
+
+  def cambiar_ciudad_destino(ciudad)
+    @destino[1] = ciudad
+  end
+
+  def cambiar_pais_destino(pais)
+    @destino[0] = pais
   end
 
 end

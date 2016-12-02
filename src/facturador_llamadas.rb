@@ -4,7 +4,7 @@ class FacturadorDeLlamadas
 
   def initialize(tipos_de_llamada)
     @llamadas = []
-    @tipos_de_llamadas = tipos_de_llamada
+    @tipos_de_llamada = tipos_de_llamada
   end
 
   def factura_del_mes
@@ -22,11 +22,12 @@ class FacturadorDeLlamadas
   end
 
   def costo_llamada(llamada)
-    delegar(llamada).costo_total(llamada)
+    tipo_de_llamada(llamada).costo_total(llamada)
   end
 
+  private
   def tipo_de_llamada(llamada)
-    @tipos_de_llamada.detect { |tipo| tipo.puede_acerse_cargo(llamada)}
+    @tipos_de_llamada.detect { |tipo| tipo.puede_hacerse_cargo(llamada)}
   end
 
 end

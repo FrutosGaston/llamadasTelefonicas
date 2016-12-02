@@ -1,12 +1,13 @@
 require 'spec_helper'
 require_relative '../src/llamada'
+require_relative '../src/costo_de_llamada'
 require 'countries'
 require 'date'
 
 describe do
 
   before(:each) do
-    @costo_nacional = CostoDeLlamada.new(0.3, &lambda{ |llamada| llamada.es_nacional?}) #-> (llamada)
+    @costo_nacional = CostoDeLlamada.new(0.3, -> (llamada){ llamada.es_nacional?}) #-> (llamada)
     @llamada = Llamada.new(ISO3166::Country.new('US'),'NY',ISO3166::Country.new('US'),'NY',5, DateTime.new(2016,11,30,11,1,1,'+7'))
   end
 
@@ -16,7 +17,7 @@ describe do
 
 
   it 'The total cost in a national call of 5 minutes should be 1.5' do
-    expect(@costo_llamada.costo_total(llamada)).to be 0.3*5
+    expect(@costo_nacional.costo_total(@llamada)).to be 0.3*5
   end
 
 end

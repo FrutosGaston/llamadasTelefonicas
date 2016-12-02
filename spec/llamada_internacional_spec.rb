@@ -1,6 +1,8 @@
 require 'spec_helper'
 require 'countries'
 require_relative '../src/llamada'
+require_relative '../src/costo_de_llamada'
+
 
 describe do
 
@@ -9,25 +11,25 @@ describe do
   end
 
   it 'should do hsomething' do
-    costo_norteamerica_europa = CostoDeLlamada.new(0.7){|llamada| llamada.llamada_a_europa? || llamada.llamada_a_norteamerica?}
+    costo_norteamerica_europa = CostoDeLlamada.new(0.7, ->(llamada) {llamada.llamada_a_europa? || llamada.llamada_a_norteamerica?})
 
-    @llamada.destino[0] = ISO3166::Country.new('US')
+    @llamada.cambiar_pais_destino(ISO3166::Country.new('US'))
 
-      expect(costo_norteamerica_europa.costo_por_minuto).to be 0.7
+    expect(costo_norteamerica_europa.costo_por_minuto).to be 0.7
   end
 
   it 'asdf' do
-    costo_sudamerica = CostoDeLlamada.new(0.5) {|llamada| llamada.llamada_a_sudamerica?}
+    costo_sudamerica = CostoDeLlamada.new(0.5, ->(llamada) {llamada.llamada_a_sudamerica?})
 
-    @llamada.destino[0] = ISO3166::Country.new('AR')
+    @llamada.cambiar_pais_destino(ISO3166::Country.new('AR'))
 
     expect(costo_sudamerica.costo_por_minuto).to be 0.5
   end
 
   it 'asddsfgf' do
-    costo_internacional_resto = CostoDeLlamada.new(1.5) {|llamada| llamada.es_internacional?}
+    costo_internacional_resto = CostoDeLlamada.new(1.5, ->(llamada) {llamada.es_internacional?})
 
-    @llamada.destino[0] = ISO3166::Country.new('ZW')
+    @llamada.cambiar_pais_destino(ISO3166::Country.new('ZW'))
 
     expect(costo_internacional_resto.costo_por_minuto).to be 1.5
   end
