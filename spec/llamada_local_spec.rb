@@ -3,12 +3,17 @@ require 'date'
 require 'countries'
 require_relative '../src/llamada'
 require_relative '../src/costo_de_llamada'
+require_relative '../src/costos_de_llamada_basicos'
+
 
 
 describe do
 
   before(:each) do
-    @llamada = Llamada.new(ISO3166::Country.new('US'),'NY',ISO3166::Country.new('US'),'NY',5, DateTime.new(2016,11,30,11,1,1,'+7'))
+    origen = Ubicacion.new(ISO3166::Country.new('US'),'NY')
+    destino = Ubicacion.new(ISO3166::Country.new('US'),'NY')
+
+    @llamada = Llamada.new(origen,destino,5, DateTime.new(2016,11,30,11,1,1,'+7'))
     @costo_local_habil = CostoDeLlamada.new(0.2, ->(llamada) { llamada.es_local? && llamada.es_dia_de_semana? & llamada.es_horario_laboral?})
     @costo_local_no_habil = CostoDeLlamada.new(0.1, ->(llamada){llamada.es_local? &&  llamada.es_fin_de_semana? || llamada.es_horario_no_laboral? })
   end

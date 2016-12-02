@@ -7,9 +7,11 @@ require 'date'
 describe do
 
   before(:each) do
-    @costo_nacional = CostoDeLlamada.new(0.3, -> (llamada){ llamada.es_nacional?}) #-> (llamada)
-    @llamada = Llamada.new(ISO3166::Country.new('US'),'NY',ISO3166::Country.new('US'),'NY',5, DateTime.new(2016,11,30,11,1,1,'+7'))
-  end
+    @costo_nacional = CostoDeLlamada.new(0.3, -> (llamada){ llamada.es_nacional?})
+    origen = Ubicacion.new(ISO3166::Country.new('US'),'NY')
+    destino = Ubicacion.new(ISO3166::Country.new('US'),'Y')
+
+    @llamada = Llamada.new(origen,destino,5, DateTime.new(2016,11,30,11,1,1,'+7'))  end
 
   it 'The cost per minute in a national call sould be 0.3' do
     expect(@costo_nacional.costo_por_minuto).to be 0.3

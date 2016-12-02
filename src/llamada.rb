@@ -1,5 +1,6 @@
 require 'countries'
 require 'date'
+require_relative '../src/ubicacion'
 
 class Llamada
 
@@ -9,10 +10,10 @@ class Llamada
   attr_accessor :origen
 
 
-  def initialize(pais_origen,ciudad_origen, pais_destino, ciudad_destino, duracion, momento)
+  def initialize(ubicacion_origen, ubicacion_destino, duracion, momento)
 
-    @origen = [pais_origen , ciudad_origen]
-    @destino = [pais_destino, ciudad_destino]
+    @origen = ubicacion_origen
+    @destino = ubicacion_destino
     @duracion = duracion
     @momento = momento
 
@@ -35,11 +36,11 @@ class Llamada
   end
 
   def es_nacional?
-    @origen.first == @destino.first
+    @origen.es_mismo_pais?(@destino)
   end
 
   def es_local?
-    es_nacional? && @origen.last == @destino.last
+    es_nacional? && @origen.es_misma_ciudad?(@destino)
   end
 
   def es_internacional?
@@ -47,23 +48,15 @@ class Llamada
   end
 
   def llamada_a_europa?
-    @destino.first.region == 'Europe'
+    @destino.es_pais?('Europe')
   end
 
   def llamada_a_norteamerica?
-    @destino.first.region == 'Northern America'
+    @destino.es_region?('Northern America')
   end
 
   def llamada_a_sudamerica?
-    @destino.first.region == 'South America'
-  end
-
-  def cambiar_ciudad_destino(ciudad)
-    @destino[1] = ciudad
-  end
-
-  def cambiar_pais_destino(pais)
-    @destino[0] = pais
+    @destino.es_region?('South America')
   end
 
 end
